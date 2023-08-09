@@ -7,7 +7,7 @@
   },
   "headline": "{{ .Title }}",
   "description" : "{{ if .Description }}{{ .Description | plainify }}{{ else }}{{if .IsPage}}{{ .Summary | plainify  }}{{ end }}{{ end }}",
-  "inLanguage" : "{{ .Lang }}",
+  "inLanguage" : "it",
   "wordCount": {{ .WordCount }},
   "datePublished" : "{{ .PublishDate.Format "2006-01-02T15:04:05" }}",
   "dateModified" : "{{ .Date.Format "2006-01-02T15:04:05"  }}",

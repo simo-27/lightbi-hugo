@@ -9,7 +9,7 @@
     "@id": "{{ .Permalink }}"
   },
   "description" : "{{ if .Description }}{{ .Description | plainify }}{{ else }}{{if .IsPage}}{{ .Summary | plainify  }}{{ end }}{{ end }}",
-  "inLanguage" : "{{ .Lang }}",
+  "inLanguage" : "it",
   {{ if .Params.author -}}
     "author": {
       "@type": "Person",
