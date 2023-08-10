@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
 
-      <div class="card-image card-image-blog p-0">
+      <div class="card-image card-image-blog py-4">
         {{ if .Params.image }}
         <img src="{{ .Params.image }}" alt="{{ .Title }}" class="rounded img-fluid">
         {{ end }}
@@ -16,6 +16,28 @@
     </div>
  
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+
+      
+      {{ .Description }}
+      
+
+      <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="offset-lg-2 col-lg-8 col-md-12 col-12 text-center">
+                    <span class="fs-4 ls-md text-uppercase fw-semibold" style="color: #00548f;">HAI BISOGNO DI UN SITO PROFESSIONALE?</span>
+                    <!-- heading -->
+                    <p class="h2 display-6 mt-4 mb-3 fw-bold">Preventivo e Anteprima Gratuita!</p>
+                    <!-- para -->
+                    <p class="lead px-lg-8 mb-4"><b>Siamo specializzati nella creazione di siti web moderni e professionali a prezzi vantaggiosi. Eleva la tua attività con noi.</b></p>
+                    <a href="/" class="btn btn-primary rounded-4" style="background-color: #00548f !important; border-color: #00548f !important;">Scopri di più</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
       <article role="main" class="blog-post">
         {{ .Content }}
       </article>
@@ -57,7 +79,7 @@
           <div class="col-md-10">
             <div class="card-body p-1.1">
 
-              <p class="p-0 m-0"><small class="text-muted ">Scritto da <b>Simone</b></small></p>
+              <p class="p-0 m-0"><small class="text-muted "><a href="/">Scritto da <b>Sitia Web Agency</a></b></small></p>
               <h5>
                 {{ if not .Site.Params.hideAuthor }}
                 {{ if .Params.author }}
