@@ -14,33 +14,57 @@
         {{ end }}
       </div>
     </div>
- 
+
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
 
-      
+
       {{ .Description }}
-      
+
 
       <div class="py-5">
         <div class="container">
-            <div class="row">
-                <div class="offset-lg-2 col-lg-8 col-md-12 col-12 text-center">
-                    <span class="fs-4 ls-md text-uppercase fw-semibold" style="color: #00548f;">HAI BISOGNO DI UN SITO PROFESSIONALE?</span>
-                    <!-- heading -->
-                    <p class="h2 display-6 mt-4 mb-3 fw-bold">Preventivo e Anteprima Gratuita!</p>
-                    <!-- para -->
-                    <p class="lead px-lg-8 mb-4"><b>Siamo specializzati nella creazione di siti web moderni e professionali a prezzi vantaggiosi. Eleva la tua attività con noi.</b></p>
-                    <a href="/" class="btn btn-primary rounded-4" style="background-color: #00548f !important; border-color: #00548f !important;">Scopri di più</a>
-                </div>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-8 col-md-12 col-12 text-center">
+              <span class="fs-4 ls-md text-uppercase fw-semibold" style="color: #00548f;">HAI BISOGNO DI UN SITO
+                PROFESSIONALE?</span>
+              <!-- heading -->
+              <p class="h2 display-6 mt-4 mb-3 fw-bold">Preventivo e Anteprima Gratuita!</p>
+              <!-- para -->
+              <p class="lead px-lg-8 mb-4"><b>Siamo specializzati nella creazione di siti web moderni e professionali a
+                  prezzi vantaggiosi. Eleva la tua attività con noi.</b></p>
+              <a href="/" class="btn btn-primary rounded-4"
+                style="background-color: #00548f !important; border-color: #00548f !important;">Scopri di più</a>
             </div>
+          </div>
         </div>
-    </div>
-    
+      </div>
+
 
 
       <article role="main" class="blog-post">
         {{ .Content }}
       </article>
+
+      
+      <div class="py-5">
+        <div class="container">
+          <div class="row">
+            <div class="offset-lg-2 col-lg-8 col-md-12 col-12 text-center">
+              <span class="fs-4 ls-md text-uppercase fw-semibold" style="color: #00548f;">HAI BISOGNO DI UN SITO
+                PROFESSIONALE?</span>
+              <!-- heading -->
+              <p class="h2 display-6 mt-4 mb-3 fw-bold">Preventivo e Anteprima Gratuita!</p>
+              <!-- para -->
+              <p class="lead px-lg-8 mb-4"><b>Siamo specializzati nella creazione di siti web moderni e professionali a
+                  prezzi vantaggiosi. Eleva la tua attività con noi.</b></p>
+              <a href="/" class="btn btn-primary rounded-4"
+                style="background-color: #00548f !important; border-color: #00548f !important;">Scopri di più</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </div>
 
@@ -49,15 +73,15 @@
       <hr />
     </div>
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
-        {{ if .Params.tags }}
-          <div class="blog-tags">
-            {{ range .Params.tags }}
-              <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>
-            {{ end }}
-          </div>
+      {{ if .Params.tags }}
+      <div class="blog-tags">
+        {{ range .Params.tags }}
+        <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>
         {{ end }}
       </div>
- 
+      {{ end }}
+    </div>
+
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
       {{ if $.Param "socialShare" }}
       <section id="social-share">
@@ -71,15 +95,16 @@
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 mt-3">
       <div class="card">
         <div class="row no-gutters">
-          <div class="col-md-2 "> 
+          <div class="col-md-2 ">
             <div class="card-body ">
-            <img src="{{ "/img/bino-about-small.jpg" }}" class="img-responsive img-50 img-round" alt="">
-          </div>
+              <img src="{{ "/img/bino-about-small.jpg" }}" class="img-responsive img-50 img-round" alt="">
+            </div>
           </div>
           <div class="col-md-10">
             <div class="card-body p-1.1">
 
-              <p class="p-0 m-0"><small class="text-muted "><a href="/">Scritto da <b>Sitia Web Agency</a></b></small></p>
+              <p class="p-0 m-0"><small class="text-muted "><a href="/">Scritto da <b>Sitia Web Agency</a></b></small>
+              </p>
               <h5>
                 {{ if not .Site.Params.hideAuthor }}
                 {{ if .Params.author }}
@@ -94,64 +119,63 @@
           </div>
         </div>
 
-      
+
+      </div>
     </div>
-  </div>
 
-      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
-        {{ if ne .Type "page" }}
-        <ul class="list-group list-group-horizontal" style="flex-direction: row">
-          {{ if .PrevInSection }}
-          <li class="list-group-item b-0">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      {{ if ne .Type "page" }}
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        {{ if .PrevInSection }}
+        <li class="list-group-item b-0">
 
-            <a type="button" class="btn btn-dark" role="button" href="{{ .PrevInSection.Permalink }}"
-              data-toggle="tooltip" data-placement="top" title="{{ .PrevInSection.Title }}">Articolo Precedente</a>
-          </li>
-          {{ end }}
-
-
-          {{ if .NextInSection }}
-          <li class="list-group-item ms-auto b-0">
-            <a type="button" class="btn btn-dark" role="button" href="{{ .NextInSection.Permalink }}"
-              data-toggle="tooltip" data-placement="top" title="Prossimo Articolo">Prossimo Articolo</a>
-          </li>
-          {{ end }}
-        </ul>
+          <a type="button" class="btn btn-dark" role="button" href="{{ .PrevInSection.Permalink }}"
+            data-toggle="tooltip" data-placement="top" title="{{ .PrevInSection.Title }}">Articolo Precedente</a>
+        </li>
         {{ end }}
-      </div>
 
-      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4"> 
-      </div>
+
+        {{ if .NextInSection }}
+        <li class="list-group-item ms-auto b-0">
+          <a type="button" class="btn btn-dark" role="button" href="{{ .NextInSection.Permalink }}"
+            data-toggle="tooltip" data-placement="top" title="Prossimo Articolo">Prossimo Articolo</a>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
     </div>
   </div>
+</div>
 
-  <div class="">
-    
+<div class="">
 
-    {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (ne .Type "page"))) }}
-    {{ if .Site.DisqusShortname }}
-    {{ if .Site.Params.delayDisqus }}
-    <div class="disqus-comments">
-      <button id="show-comments" class="btn btn-default" type="button">{{ i18n "show" }} <span
-          class="disqus-comment-count" data-disqus-url="{{ trim .Permalink "/" }}">{{ i18n "comments" }}</span></button>
-      <div id="disqus_thread"></div>
 
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = '{{ trim .Permalink "/" }}';
-        };
+  {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (ne .Type "page"))) }}
+  {{ if .Site.DisqusShortname }}
+  {{ if .Site.Params.delayDisqus }}
+  <div class="disqus-comments">
+    <button id="show-comments" class="btn btn-default" type="button">{{ i18n "show" }} <span
+        class="disqus-comment-count" data-disqus-url="{{ trim .Permalink "/" }}">{{ i18n "comments" }}</span></button>
+    <div id="disqus_thread"></div>
 
-      </script>
-    </div>
-    {{ else }}
-    <div class="disqus-comments">
-      {{ template "_internal/disqus.html" . }}
-    </div>
-    {{ end }}
-    {{ end }}
-    {{ end }}
-
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = '{{ trim .Permalink "/" }}';
+      };
+    </script>
   </div>
+  {{ else }}
+  <div class="disqus-comments">
+    {{ template "_internal/disqus.html" . }}
+  </div>
+  {{ end }}
+  {{ end }}
+  {{ end }}
+
+</div>
 </div>
 </div>
 {{ end }}
